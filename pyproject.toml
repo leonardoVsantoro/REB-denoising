@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "reb-denoising"
+version = "0.1.0"
+description = "Nonparametric Riemannian Empirical Bayes Denoising on compact manifolds"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "Adam Q. Jaffe" },
+  { name = "Leonardo V. Santoro" },
+  { name = "Bodhisattva Sen" },
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "geomstats",
+  "matplotlib",
+  "tqdm",
+  "scikit-learn",
+]
+
+[project.optional-dependencies]
+bio = ["biopython"]
+dev = ["jupyter", "seaborn", "pandas"]
+
+[tool.setuptools.packages.find]
+include = ["reb*"]
