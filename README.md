@@ -13,7 +13,7 @@ A fully data-driven denoiser for measurements of latent variables on compact Rie
 1. **Spectral density estimation** — estimate $\hat f$ and its Riemannian gradient $\nabla \hat f$ from the data using a truncated eigenfunction expansion of the Laplace–Beltrami operator.
 2. **Score estimation** — form the score $\nabla \log \hat f = \nabla \hat f \,/\, \max(\hat f,\,\rho)$, where $\rho > 0$ is a small regulariser.
 3. **Tweedie-style denoising step** — apply the Riemannian exponential map:
-$$\hat\delta(x) = \exp_x \bigl(\sigma^2 \,\nabla \log \hat f(x)\bigr)$$
+$$\hat\delta(x) = \exp_x \bigl(\sigma^2 \nabla \log \hat f(x)\bigr)$$
 
 Hyperparameters $(M, \rho)$ are selected automatically via K-fold cross-validation using the Hyvärinen score-matching loss.
 
